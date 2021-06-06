@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+ <body>
+  <form method="POST" action="main.js"> 
+  <div id="app">
+    <div class="container">
+          <div class="item_header">
+            <div class="option">選擇</div>
+            <div class="item_detail">品項</div>
+            <div class="price">價格</div>
+            <div class="size">尺寸</div>
+            <div class="note">備註</div>
+          </div>
+          <div class="item_container" v-for="(item,index) in itemList" :key="item.id" >
+            <div class="item_header item_body">
+                    <div class="option"><input type="radio" name="sure" v-model="picked">
+                      <label for="sure"></label>
+                    </div>
+                    <div class="item_detail" name="coffee">美式咖啡</div>
+                    
+                    <div class="price"><span>$</span>40</div>
+                    
+                    <div class="size">
+                          <select>
+                <option name="S">S
+                <option name="M">M
+                <option name="L">L
+                          </select>
+                    </div>
+
+                    <div> <textarea class="note" rows="1" cols="15"></textarea></div>
+                                          
+
+            
+             </div>
+             <div class="item_header item_body">
+              <div><input type="radio" name="sure" v-model="picked">
+                <label for="sure"></label></div>
+                <div class="item_detail" name="latte">拿鐵</div>
+              
+              <div class="price"><span>$</span>50</div>
+              
+              <div class="size">
+                    <select>
+                <option name="S">S
+                <option name="M">M
+                <option name="L">L
+                    </select>
+              </div>
+
+              <div> <textarea class="note" rows="1" cols="15"></textarea></div>
+                                    
+
+              
+              
+           
+       </div>
+       <div class="item_header item_body">
+        <div><input type="radio" name="sure" v-model="picked">
+          <label for="sure"></label></div>
+          <div class="item_detail" name="expresso">Espresso</div>
+        <div class="price"><span>$</span>60</div>
+        
+        <div class="size">
+              <select>
+                <option name="S">S
+                <option name="M">M
+                <option name="L">L
+              </select>
+        </div>
+
+        <div> <textarea class="note" rows="1" cols="15"></textarea></div>
+                              
+  
+        
+
+ </div>
+
+          </div>
+
+    </div>
+
+
+  </div>
+  <input type="submit" value="送出" class="submit">
+ </form>
+</body>   
+  <script src="main.js"></script>
+</html>
